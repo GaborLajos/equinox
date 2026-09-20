@@ -1,0 +1,495 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 55;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		22CD8EED306014E90090D409 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 22CD8EEC306014E90090D409 /* main.m */; };
+		22CD8F053060167C0090D409 /* eclipse_11925.h in Headers */ = {isa = PBXBuildFile; fileRef = 22CD8F043060167C0090D409 /* eclipse_11925.h */; };
+		22CD8F073060167C0090D409 /* eclipse_11925.m in Sources */ = {isa = PBXBuildFile; fileRef = 22CD8F063060167C0090D409 /* eclipse_11925.m */; };
+		22CD8F12306016D30090D409 /* test.m in Sources */ = {isa = PBXBuildFile; fileRef = 22CD8F11306016D30090D409 /* test.m */; };
+		22CD8F13306016D30090D409 /* libeclipse_11925.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 22CD8F023060167C0090D409 /* libeclipse_11925.a */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		22CD8F14306016D30090D409 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 22CD8EE1306014E90090D409 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 22CD8F013060167C0090D409;
+			remoteInfo = eclipse_11925;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		22CD8EE7306014E90090D409 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = /usr/share/man/man1/;
+			dstSubfolderSpec = 0;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 1;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		22CD8EE9306014E90090D409 /* equinox_test */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = equinox_test; sourceTree = BUILT_PRODUCTS_DIR; };
+		22CD8EEC306014E90090D409 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		22CD8EF93060152C0090D409 /* unittest.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = unittest.m; sourceTree = "<group>"; };
+		22CD8F023060167C0090D409 /* libeclipse_11925.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libeclipse_11925.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		22CD8F043060167C0090D409 /* eclipse_11925.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = eclipse_11925.h; sourceTree = "<group>"; };
+		22CD8F063060167C0090D409 /* eclipse_11925.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = eclipse_11925.m; sourceTree = "<group>"; };
+		22CD8F0F306016D30090D409 /* test.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = test.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		22CD8F11306016D30090D409 /* test.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = test.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		22CD8EE6306014E90090D409 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		22CD8F003060167C0090D409 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		22CD8F0C306016D30090D409 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				22CD8F13306016D30090D409 /* libeclipse_11925.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		22CD8EE0306014E90090D409 = {
+			isa = PBXGroup;
+			children = (
+				22CD8EEB306014E90090D409 /* equinox_test */,
+				22CD8EF83060152C0090D409 /* unittest */,
+				22CD8F033060167C0090D409 /* eclipse_11925 */,
+				22CD8F10306016D30090D409 /* test */,
+				22CD8EEA306014E90090D409 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		22CD8EEA306014E90090D409 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				22CD8EE9306014E90090D409 /* equinox_test */,
+				22CD8F023060167C0090D409 /* libeclipse_11925.a */,
+				22CD8F0F306016D30090D409 /* test.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		22CD8EEB306014E90090D409 /* equinox_test */ = {
+			isa = PBXGroup;
+			children = (
+				22CD8EEC306014E90090D409 /* main.m */,
+			);
+			path = equinox_test;
+			sourceTree = "<group>";
+		};
+		22CD8EF83060152C0090D409 /* unittest */ = {
+			isa = PBXGroup;
+			children = (
+				22CD8EF93060152C0090D409 /* unittest.m */,
+			);
+			path = unittest;
+			sourceTree = "<group>";
+		};
+		22CD8F033060167C0090D409 /* eclipse_11925 */ = {
+			isa = PBXGroup;
+			children = (
+				22CD8F043060167C0090D409 /* eclipse_11925.h */,
+				22CD8F063060167C0090D409 /* eclipse_11925.m */,
+			);
+			path = eclipse_11925;
+			sourceTree = "<group>";
+		};
+		22CD8F10306016D30090D409 /* test */ = {
+			isa = PBXGroup;
+			children = (
+				22CD8F11306016D30090D409 /* test.m */,
+			);
+			path = test;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		22CD8EFE3060167C0090D409 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				22CD8F053060167C0090D409 /* eclipse_11925.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		22CD8EE8306014E90090D409 /* equinox_test */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 22CD8EF0306014E90090D409 /* Build configuration list for PBXNativeTarget "equinox_test" */;
+			buildPhases = (
+				22CD8EE5306014E90090D409 /* Sources */,
+				22CD8EE6306014E90090D409 /* Frameworks */,
+				22CD8EE7306014E90090D409 /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = equinox_test;
+			productName = equinox_test;
+			productReference = 22CD8EE9306014E90090D409 /* equinox_test */;
+			productType = "com.apple.product-type.tool";
+		};
+		22CD8F013060167C0090D409 /* eclipse_11925 */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 22CD8F083060167C0090D409 /* Build configuration list for PBXNativeTarget "eclipse_11925" */;
+			buildPhases = (
+				22CD8EFE3060167C0090D409 /* Headers */,
+				22CD8EFF3060167C0090D409 /* Sources */,
+				22CD8F003060167C0090D409 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = eclipse_11925;
+			productName = eclipse_11925;
+			productReference = 22CD8F023060167C0090D409 /* libeclipse_11925.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		22CD8F0E306016D30090D409 /* test */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 22CD8F16306016D30090D409 /* Build configuration list for PBXNativeTarget "test" */;
+			buildPhases = (
+				22CD8F0B306016D30090D409 /* Sources */,
+				22CD8F0C306016D30090D409 /* Frameworks */,
+				22CD8F0D306016D30090D409 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				22CD8F15306016D30090D409 /* PBXTargetDependency */,
+			);
+			name = test;
+			productName = test;
+			productReference = 22CD8F0F306016D30090D409 /* test.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		22CD8EE1306014E90090D409 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastUpgradeCheck = 1340;
+				TargetAttributes = {
+					22CD8EE8306014E90090D409 = {
+						CreatedOnToolsVersion = 13.4;
+					};
+					22CD8F013060167C0090D409 = {
+						CreatedOnToolsVersion = 13.4;
+					};
+					22CD8F0E306016D30090D409 = {
+						CreatedOnToolsVersion = 13.4;
+					};
+				};
+			};
+			buildConfigurationList = 22CD8EE4306014E90090D409 /* Build configuration list for PBXProject "equinox_test" */;
+			compatibilityVersion = "Xcode 13.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 22CD8EE0306014E90090D409;
+			productRefGroup = 22CD8EEA306014E90090D409 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				22CD8EE8306014E90090D409 /* equinox_test */,
+				22CD8F013060167C0090D409 /* eclipse_11925 */,
+				22CD8F0E306016D30090D409 /* test */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		22CD8F0D306016D30090D409 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		22CD8EE5306014E90090D409 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				22CD8EED306014E90090D409 /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		22CD8EFF3060167C0090D409 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				22CD8F073060167C0090D409 /* eclipse_11925.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		22CD8F0B306016D30090D409 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				22CD8F12306016D30090D409 /* test.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		22CD8F15306016D30090D409 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 22CD8F013060167C0090D409 /* eclipse_11925 */;
+			targetProxy = 22CD8F14306016D30090D409 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		22CD8EEE306014E90090D409 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 12.3;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		22CD8EEF306014E90090D409 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 12.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		22CD8EF1306014E90090D409 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		22CD8EF2306014E90090D409 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		22CD8F093060167C0090D409 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				EXECUTABLE_PREFIX = lib;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		22CD8F0A3060167C0090D409 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				EXECUTABLE_PREFIX = lib;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+		22CD8F17306016D30090D409 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = hu.mgl.equinox.test;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+			};
+			name = Debug;
+		};
+		22CD8F18306016D30090D409 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = hu.mgl.equinox.test;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		22CD8EE4306014E90090D409 /* Build configuration list for PBXProject "equinox_test" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				22CD8EEE306014E90090D409 /* Debug */,
+				22CD8EEF306014E90090D409 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		22CD8EF0306014E90090D409 /* Build configuration list for PBXNativeTarget "equinox_test" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				22CD8EF1306014E90090D409 /* Debug */,
+				22CD8EF2306014E90090D409 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		22CD8F083060167C0090D409 /* Build configuration list for PBXNativeTarget "eclipse_11925" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				22CD8F093060167C0090D409 /* Debug */,
+				22CD8F0A3060167C0090D409 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		22CD8F16306016D30090D409 /* Build configuration list for PBXNativeTarget "test" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				22CD8F17306016D30090D409 /* Debug */,
+				22CD8F18306016D30090D409 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 22CD8EE1306014E90090D409 /* Project object */;
+}
