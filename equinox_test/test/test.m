@@ -30,11 +30,38 @@
     // Use XCTAssert and related functions to verify your tests produce the correct results.
 }
 
+- (void)testAbsolutePath {
+  char* input = "/Users";
+  char* result = resolveSymlinks(input);
+  XCTAssertTrue(strcmp(input, result) == 0);
+    // This is an example of a functional test case.
+    // Use XCTAssert and related functions to verify your tests produce the correct results.
+}
+
+- (void)testRelativePath {
+  char* input = "testfile01";
+  char* expected = "/private/tmp/testfile01";
+  char* result = resolveSymlinks(input);
+  XCTAssertTrue(strcmp(expected, result) == 0);
+    // This is an example of a functional test case.
+    // Use XCTAssert and related functions to verify your tests produce the correct results.
+}
+
+- (void)testRelativePathWithAlias {
+  char* input = "/private/tmp/testfile02";
+  char* expected = "/private/tmp/testfile01";
+  char* result = resolveSymlinks(input);
+  XCTAssertTrue(strcmp(expected, result) == 0);
+    // This is an example of a functional test case.
+    // Use XCTAssert and related functions to verify your tests produce the correct results.
+}
+
 - (void)testPerformanceExample {
     // This is an example of a performance test case.
     [self measureBlock:^{
         // Put the code you want to measure the time of here.
     }];
 }
+
 
 @end
