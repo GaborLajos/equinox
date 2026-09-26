@@ -1,0 +1,10 @@
+#  newOutputFile.xcfilelist
+#  equinox_test
+#
+#  Created by Gabor Lajos Mate on 2026. 09. 25..
+#  
+
+# This file may be set as an input or output file list for a shell script build phase.
+# List file paths below; one per line. These paths will be considered inputs or outputs for the script phase.
+# Build settings will be expanded, e.g. $(SRCROOT)/fileName
+$(DERIVED_FILE_DIR)/eclipseMain.o

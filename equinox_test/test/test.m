@@ -6,7 +6,11 @@
 //
 
 #import <XCTest/XCTest.h>
+#import <OCMock/OCMock.h>
 #import "eclipseCommon.h"
+
+extern int counterCFString;
+extern int counterCFURL;
 
 @interface test : XCTestCase
 
@@ -26,25 +30,31 @@
   char* input = NULL;
   char* result = resolveSymlinks(input);
   XCTAssertEqual(input, result);
-    // This is an example of a functional test case.
-    // Use XCTAssert and related functions to verify your tests produce the correct results.
 }
 
-- (void)testAbsolutePath {
-  char* input = "/Users";
+- (void)testCFURLCreateWithFileSystemPath {
+  char* input = "testNullURL";
   char* result = resolveSymlinks(input);
-  XCTAssertTrue(strcmp(input, result) == 0);
-    // This is an example of a functional test case.
-    // Use XCTAssert and related functions to verify your tests produce the correct results.
+  XCTAssertEqual(input, result);
+  XCTAssertEqual(0, counterCFString);
+  XCTAssertEqual(0, counterCFURL);
 }
 
-- (void)testRelativePath {
-  char* input = "testfile01";
-  char* expected = "/private/tmp/testfile01";
+- (void)testCFURLGetFileSystemRepresentation {
+  char* input = "testFalse";
   char* result = resolveSymlinks(input);
-  XCTAssertTrue(strcmp(expected, result) == 0);
-    // This is an example of a functional test case.
-    // Use XCTAssert and related functions to verify your tests produce the correct results.
+  XCTAssertTrue(result == 0);
+  XCTAssertEqual(0, counterCFString);
+}
+
+- (void)testURLByResolvingAliasFileAtURL {
+  id classMockURL = OCMClassMock([NSURL class]);
+  NSError *error = nil;
+  OCMStub([classMockURL URLByResolvingAliasFileAtURL:(NSURL *)nil options:NSURLBookmarkResolutionWithSecurityScope error:&error]).andReturn(nil);
+
+  char* input = "testError";
+  char* result = resolveSymlinks(input);
+  XCTAssertTrue(result == nil);
 }
 
 - (void)testRelativePathWithAlias {
@@ -56,12 +66,12 @@
     // Use XCTAssert and related functions to verify your tests produce the correct results.
 }
 
-- (void)testPerformanceExample {
+//- (void)testPerformanceExample {
     // This is an example of a performance test case.
-    [self measureBlock:^{
+//    [self measureBlock:^{
         // Put the code you want to measure the time of here.
-    }];
-}
+//    }];
+//}
 
 
 @end
