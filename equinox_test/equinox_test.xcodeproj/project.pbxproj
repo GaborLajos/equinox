@@ -46,8 +46,11 @@
 		221B67E330672339007CF8FA /* eclipseMain.c in Sources */ = {isa = PBXBuildFile; fileRef = 221B67E030672339007CF8FA /* eclipseMain.c */; settings = {COMPILER_FLAGS = "-x objective-c"; }; };
 		221B67E530672363007CF8FA /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 22CD8F4230604FBC0090D409 /* Cocoa.framework */; };
 		221B67E7306723E0007CF8FA /* eclipseConfig.c in Sources */ = {isa = PBXBuildFile; fileRef = 221B67E6306723E0007CF8FA /* eclipseConfig.c */; };
+		2296C62B3067ACDB009C55D6 /* eclipse.so in Frameworks */ = {isa = PBXBuildFile; fileRef = 22CD8F023060167C0090D409 /* eclipse.so */; };
+		2296C6313067AE4D009C55D6 /* eclipse.so in Frameworks */ = {isa = PBXBuildFile; fileRef = 22CD8F023060167C0090D409 /* eclipse.so */; };
+		2296C6343067C3FB009C55D6 /* eclipse.so in CopyFiles */ = {isa = PBXBuildFile; fileRef = 22CD8F023060167C0090D409 /* eclipse.so */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 		22CD8F12306016D30090D409 /* test.m in Sources */ = {isa = PBXBuildFile; fileRef = 22CD8F11306016D30090D409 /* test.m */; };
-		22CD8F13306016D30090D409 /* eclipse.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 22CD8F023060167C0090D409 /* eclipse.a */; };
+		22CD8F13306016D30090D409 /* eclipse.so in Frameworks */ = {isa = PBXBuildFile; fileRef = 22CD8F023060167C0090D409 /* eclipse.so */; };
 		22CD8F1B306026F10090D409 /* eclipseCommon.h in Headers */ = {isa = PBXBuildFile; fileRef = 22CD8F1A306026F10090D409 /* eclipseCommon.h */; };
 		22CD8F23306027C00090D409 /* eclipse.c in Sources */ = {isa = PBXBuildFile; fileRef = 22CD8F1C306027C00090D409 /* eclipse.c */; settings = {COMPILER_FLAGS = "-xobjective-c"; }; };
 		22CD8F24306027C00090D409 /* eclipseCommon.c in Sources */ = {isa = PBXBuildFile; fileRef = 22CD8F1D306027C00090D409 /* eclipseCommon.c */; settings = {COMPILER_FLAGS = "-xobjective-c"; }; };
@@ -82,19 +85,19 @@
 			remoteGlobalIDString = 221B67433064764B007CF8FA;
 			remoteInfo = eclipseapp;
 		};
-		221B67DC306721A1007CF8FA /* PBXContainerItemProxy */ = {
+		2296C6293067ACD2009C55D6 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 22CD8EE1306014E90090D409 /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 221B67B63067198A007CF8FA;
-			remoteInfo = eclipsebundle;
+			remoteGlobalIDString = 22CD8F013060167C0090D409;
+			remoteInfo = eclipse;
 		};
-		221B67DE30672308007CF8FA /* PBXContainerItemProxy */ = {
+		2296C62F3067AE41009C55D6 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 22CD8EE1306014E90090D409 /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 221B67B63067198A007CF8FA;
-			remoteInfo = eclipsebundle;
+			remoteGlobalIDString = 22CD8F013060167C0090D409;
+			remoteInfo = eclipse;
 		};
 		22CD8F14306016D30090D409 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -106,12 +109,13 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
-		22CD8EE7306014E90090D409 /* CopyFiles */ = {
+		2296C6333067C3E5009C55D6 /* CopyFiles */ = {
 			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = /usr/share/man/man1/;
-			dstSubfolderSpec = 0;
+			buildActionMask = 8;
+			dstPath = plugins/org.eclipse.equinox.launcher.cocoa.macosx.x86_64;
+			dstSubfolderSpec = 6;
 			files = (
+				2296C6343067C3FB009C55D6 /* eclipse.so in CopyFiles */,
 			);
 			runOnlyForDeploymentPostprocessing = 1;
 		};
@@ -170,9 +174,11 @@
 		221B67E130672339007CF8FA /* eclipseCocoaMain.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; name = eclipseCocoaMain.c; path = ../features/org.eclipse.equinox.executable.feature/library/cocoa/eclipseCocoaMain.c; sourceTree = "<group>"; };
 		221B67E230672339007CF8FA /* eclipseMain.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; name = eclipseMain.c; path = ../features/org.eclipse.equinox.executable.feature/library/eclipseMain.c; sourceTree = "<group>"; };
 		221B67E6306723E0007CF8FA /* eclipseConfig.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; name = eclipseConfig.c; path = ../features/org.eclipse.equinox.executable.feature/library/eclipseConfig.c; sourceTree = "<group>"; };
+		226046E630679A3000ED624E /* eclipseappDebug.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = eclipseappDebug.entitlements; sourceTree = "<group>"; };
+		2296C6323067BD82009C55D6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		22CD8EE9306014E90090D409 /* equinox_test */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = equinox_test; sourceTree = BUILT_PRODUCTS_DIR; };
 		22CD8EEC306014E90090D409 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		22CD8F023060167C0090D409 /* eclipse.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = eclipse.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		22CD8F023060167C0090D409 /* eclipse.so */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = eclipse.so; sourceTree = BUILT_PRODUCTS_DIR; };
 		22CD8F043060167C0090D409 /* eclipse_11925.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = eclipse_11925.h; sourceTree = "<group>"; };
 		22CD8F063060167C0090D409 /* eclipse_11925.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = eclipse_11925.m; sourceTree = "<group>"; };
 		22CD8F0F306016D30090D409 /* test.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = test.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -203,6 +209,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2296C62B3067ACDB009C55D6 /* eclipse.so in Frameworks */,
 				221B67E530672363007CF8FA /* Cocoa.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -234,6 +241,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2296C6313067AE4D009C55D6 /* eclipse.so in Frameworks */,
 				221B679A3067189A007CF8FA /* Cocoa.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -251,7 +259,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				221B673B30613A4D007CF8FA /* OCMock in Frameworks */,
-				22CD8F13306016D30090D409 /* eclipse.a in Frameworks */,
+				22CD8F13306016D30090D409 /* eclipse.so in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -269,6 +277,8 @@
 		221B67453064764C007CF8FA /* eclipseapp */ = {
 			isa = PBXGroup;
 			children = (
+				2296C6323067BD82009C55D6 /* Info.plist */,
+				226046E630679A3000ED624E /* eclipseappDebug.entitlements */,
 				221B67463064764C007CF8FA /* AppDelegate.h */,
 				221B67473064764C007CF8FA /* AppDelegate.m */,
 				221B67493064764C007CF8FA /* ViewController.h */,
@@ -368,7 +378,7 @@
 			isa = PBXGroup;
 			children = (
 				22CD8EE9306014E90090D409 /* equinox_test */,
-				22CD8F023060167C0090D409 /* eclipse.a */,
+				22CD8F023060167C0090D409 /* eclipse.so */,
 				22CD8F0F306016D30090D409 /* test.xctest */,
 				221B67443064764C007CF8FA /* eclipse.app */,
 				221B675B30647650007CF8FA /* eclipseappTests.xctest */,
@@ -460,6 +470,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 221B676D30647650007CF8FA /* Build configuration list for PBXNativeTarget "eclipseapp" */;
 			buildPhases = (
+				2296C6333067C3E5009C55D6 /* CopyFiles */,
 				221B67403064764B007CF8FA /* Sources */,
 				221B67413064764B007CF8FA /* Frameworks */,
 				221B67423064764B007CF8FA /* Resources */,
@@ -467,7 +478,7 @@
 			buildRules = (
 			);
 			dependencies = (
-				221B67DF30672308007CF8FA /* PBXTargetDependency */,
+				2296C62A3067ACD2009C55D6 /* PBXTargetDependency */,
 			);
 			name = eclipseapp;
 			productName = eclipseapp;
@@ -534,12 +545,11 @@
 			buildPhases = (
 				22CD8EE5306014E90090D409 /* Sources */,
 				22CD8EE6306014E90090D409 /* Frameworks */,
-				22CD8EE7306014E90090D409 /* CopyFiles */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				221B67DD306721A1007CF8FA /* PBXTargetDependency */,
+				2296C6303067AE41009C55D6 /* PBXTargetDependency */,
 			);
 			name = equinox_test;
 			productName = equinox_test;
@@ -560,7 +570,7 @@
 			);
 			name = eclipse;
 			productName = eclipse_11925;
-			productReference = 22CD8F023060167C0090D409 /* eclipse.a */;
+			productReference = 22CD8F023060167C0090D409 /* eclipse.so */;
 			productType = "com.apple.product-type.library.static";
 		};
 		22CD8F0E306016D30090D409 /* test */ = {
@@ -780,15 +790,15 @@
 			target = 221B67433064764B007CF8FA /* eclipseapp */;
 			targetProxy = 221B676630647650007CF8FA /* PBXContainerItemProxy */;
 		};
-		221B67DD306721A1007CF8FA /* PBXTargetDependency */ = {
+		2296C62A3067ACD2009C55D6 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 221B67B63067198A007CF8FA /* eclipsebundle */;
-			targetProxy = 221B67DC306721A1007CF8FA /* PBXContainerItemProxy */;
+			target = 22CD8F013060167C0090D409 /* eclipse */;
+			targetProxy = 2296C6293067ACD2009C55D6 /* PBXContainerItemProxy */;
 		};
-		221B67DF30672308007CF8FA /* PBXTargetDependency */ = {
+		2296C6303067AE41009C55D6 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 221B67B63067198A007CF8FA /* eclipsebundle */;
-			targetProxy = 221B67DE30672308007CF8FA /* PBXContainerItemProxy */;
+			target = 22CD8F013060167C0090D409 /* eclipse */;
+			targetProxy = 2296C62F3067AE41009C55D6 /* PBXContainerItemProxy */;
 		};
 		22CD8F15306016D30090D409 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
@@ -816,11 +826,16 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CLANG_ENABLE_OBJC_ARC = NO;
 				CLANG_WARN_STRICT_PROTOTYPES = NO;
-				CODE_SIGN_ENTITLEMENTS = eclipseapp/eclipseapp.entitlements;
+				CODE_SIGN_ENTITLEMENTS = eclipseapp/eclipseappDebug.entitlements;
 				CODE_SIGN_IDENTITY = "-";
+				CODE_SIGN_INJECT_BASE_ENTITLEMENTS = YES;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = "$(LIB_VERSION)";
+				DEVELOPMENT_TEAM = "";
+				ENABLE_APP_SANDBOX = YES;
+				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_USER_SELECTED_FILES = readwrite;
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					COCOA,
 					MACOSX,
@@ -829,6 +844,7 @@
 					"DEFAULT_WS=\"\\\"cocoa\\\"\"",
 				);
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = eclipseapp/Info.plist;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				INFOPLIST_KEY_NSMainStoryboardFile = Main;
 				INFOPLIST_KEY_NSPrincipalClass = NSApplication;
@@ -841,6 +857,7 @@
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				PRODUCT_BUNDLE_IDENTIFIER = hu.mgl.equinox.eclipseapp;
 				PRODUCT_NAME = eclipse;
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 			};
 			name = Debug;
@@ -852,11 +869,16 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CLANG_ENABLE_OBJC_ARC = NO;
 				CLANG_WARN_STRICT_PROTOTYPES = NO;
-				CODE_SIGN_ENTITLEMENTS = eclipseapp/eclipseapp.entitlements;
+				CODE_SIGN_ENTITLEMENTS = "";
 				CODE_SIGN_IDENTITY = "-";
+				CODE_SIGN_INJECT_BASE_ENTITLEMENTS = YES;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = "$(LIB_VERSION)";
+				DEVELOPMENT_TEAM = M3ALS6P5WQ;
+				ENABLE_APP_SANDBOX = YES;
+				ENABLE_HARDENED_RUNTIME = NO;
+				ENABLE_USER_SELECTED_FILES = readwrite;
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					COCOA,
 					MACOSX,
@@ -865,6 +887,7 @@
 					"DEFAULT_WS=\"\\\"cocoa\\\"\"",
 				);
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = eclipseapp/Info.plist;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				INFOPLIST_KEY_NSMainStoryboardFile = Main;
 				INFOPLIST_KEY_NSPrincipalClass = NSApplication;
@@ -972,6 +995,7 @@
 				CURRENT_PROJECT_VERSION = "$(LIB_VERSION)";
 				DEPLOYMENT_LOCATION = NO;
 				EXECUTABLE_EXTENSION = so;
+				EXECUTABLE_PREFIX = plugins/org.eclipse.equinox.cocoa.macos.x86_64/;
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEFAULT_OS_ARCH=\"\\\"x86_64\\\"\"",
 					"DEFAULT_WS=\"\\\"cocoa\\\"\"",
@@ -1023,6 +1047,7 @@
 				CURRENT_PROJECT_VERSION = "$(LIB_VERSION)";
 				DEPLOYMENT_LOCATION = NO;
 				EXECUTABLE_EXTENSION = so;
+				EXECUTABLE_PREFIX = plugins/org.eclipse.equinox.cocoa.macos.x86_64/;
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEFAULT_OS_ARCH=\"\\\"x86_64\\\"\"",
 					"DEFAULT_WS=\"\\\"cocoa\\\"\"",
@@ -1135,6 +1160,7 @@
 					"-fcoverage-mapping",
 				);
 				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
 			};
 			name = Debug;
 		};
@@ -1206,12 +1232,14 @@
 					"-fcoverage-mapping",
 				);
 				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
 			};
 			name = Release;
 		};
 		22CD8EF1306014E90090D409 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "-";
 				CODE_SIGN_STYLE = Automatic;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -1220,6 +1248,7 @@
 		22CD8EF2306014E90090D409 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "-";
 				CODE_SIGN_STYLE = Automatic;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -1229,6 +1258,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
+				EXECUTABLE_EXTENSION = so;
 				EXECUTABLE_PREFIX = "";
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEFAULT_OS_ARCH=\"\\\"x86_64\\\"\"",
@@ -1248,7 +1278,7 @@
 					"-fcoverage-mapping",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SKIP_INSTALL = YES;
+				SKIP_INSTALL = NO;
 			};
 			name = Debug;
 		};
@@ -1256,6 +1286,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
+				EXECUTABLE_EXTENSION = so;
 				EXECUTABLE_PREFIX = "";
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEFAULT_OS_ARCH=\"\\\"x86_64\\\"\"",
@@ -1275,7 +1306,7 @@
 					"-fcoverage-mapping",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SKIP_INSTALL = YES;
+				SKIP_INSTALL = NO;
 			};
 			name = Release;
 		};
