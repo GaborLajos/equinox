@@ -275,7 +275,7 @@ static _TCHAR* findProgram(_TCHAR* argv[]) {
 static void parseArgs( int* pArgc, _TCHAR* argv[], int useVMargs )
 {
     int     index;
-      int skipOldArgs = 0;
+    int skipOldArgs = 0;
 
     /* Ensure the list of user argument is NULL terminated. */
     argv[ *pArgc ] = NULL;
