@@ -112,7 +112,7 @@
 		2296C6333067C3E5009C55D6 /* Copy Files */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 12;
-			dstPath = plugins/org.eclipse.equinox.launcher.cocoa.macosx.x86_64_eclipse.11925.so;
+			dstPath = plugins/org.eclipse.equinox.launcher.cocoa.macosx.x86_64_11925.so;
 			dstSubfolderSpec = 16;
 			files = (
 				2296C6343067C3FB009C55D6 /* eclipse_11925.so in Copy Files */,
@@ -1273,6 +1273,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(JAVA_HOME)/lib/server\n";
 				LIBRARY_SEARCH_PATHS = "$(JAVA_HOME)/lib/server";
 				LIB_VERSION = 11925;
+				MACH_O_TYPE = mh_dylib;
 				OTHER_CFLAGS = (
 					"-fprofile-instr-generate",
 					"-fcoverage-mapping",
@@ -1302,6 +1303,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(JAVA_HOME)/lib/server\n";
 				LIBRARY_SEARCH_PATHS = "$(JAVA_HOME)/lib/server";
 				LIB_VERSION = 11925;
+				MACH_O_TYPE = mh_dylib;
 				OTHER_CFLAGS = (
 					"-fprofile-instr-generate",
 					"-fcoverage-mapping",
