@@ -1,0 +1,14 @@
+# Recommended LLDB initialization for JVM / JNI debugging
+
+# JVM uses SIGSEGV internally for guard pages → do not stop on it
+process handle --pass true --stop false --notify true SIGSEGV
+
+# JVM sometimes uses SIGBUS for memory probing → do not stop on it
+process handle --pass true --stop false --notify true SIGBUS
+
+# JVM may emit SIGPIPE during shutdown → do not stop on it
+process handle --pass true --stop false --notify true SIGPIPE
+
+# Optional: cleaner backtraces
+settings set target.process.thread.step-avoid-regexp "std::|libjvm|libsystem"
+
