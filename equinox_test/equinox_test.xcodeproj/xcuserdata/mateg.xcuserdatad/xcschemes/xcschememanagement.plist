@@ -7,7 +7,7 @@
 		<key>eclipse.xcscheme_^#shared#^_</key>
 		<dict>
 			<key>orderHint</key>
-			<integer>6</integer>
+			<integer>3</integer>
 		</dict>
 		<key>eclipse_11925.xcscheme_^#shared#^_</key>
 		<dict>
@@ -17,27 +17,33 @@
 		<key>eclipseapp.xcscheme_^#shared#^_</key>
 		<dict>
 			<key>orderHint</key>
-			<integer>3</integer>
+			<integer>1</integer>
 		</dict>
-		<key>eclipseappTests.xcscheme_^#shared#^_</key>
+		<key>eclipseapp2MainTests.xcscheme_^#shared#^_</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+			<key>orderHint</key>
+			<integer>9</integer>
+		</dict>
+		<key>eclipseappTests copy.xcscheme_^#shared#^_</key>
 		<dict>
 			<key>orderHint</key>
 			<integer>4</integer>
 		</dict>
-		<key>eclipsebundle.xcscheme_^#shared#^_</key>
+		<key>eclipseappTests.xcscheme_^#shared#^_</key>
 		<dict>
+			<key>isShown</key>
+			<false/>
 			<key>orderHint</key>
-			<integer>5</integer>
-		</dict>
-		<key>equinox_test.xcscheme_^#shared#^_</key>
-		<dict>
-			<key>orderHint</key>
-			<integer>0</integer>
+			<integer>2</integer>
 		</dict>
 		<key>test.xcscheme_^#shared#^_</key>
 		<dict>
+			<key>isShown</key>
+			<false/>
 			<key>orderHint</key>
-			<integer>2</integer>
+			<integer>0</integer>
 		</dict>
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
@@ -62,7 +68,17 @@
 			<key>primary</key>
 			<true/>
 		</dict>
+		<key>22CD8F013060167C0090D409</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>22CD8F0E306016D30090D409</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>22D237D6306A3CDC0098AB29</key>
 		<dict>
 			<key>primary</key>
 			<true/>

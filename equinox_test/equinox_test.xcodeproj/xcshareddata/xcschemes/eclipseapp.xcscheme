@@ -33,8 +33,8 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "221B675A30647650007CF8FA"
-               BuildableName = "eclipseappTests.xctest"
-               BlueprintName = "eclipseappTests"
+               BuildableName = "eclipseapp1CocoaMainTests.xctest"
+               BlueprintName = "eclipseapp1CocoaMainTests"
                ReferencedContainer = "container:equinox_test.xcodeproj">
             </BuildableReference>
          </TestableReference>
@@ -47,6 +47,14 @@
                BlueprintName = "eclipseappUITests"
                ReferencedContainer = "container:equinox_test.xcodeproj">
             </BuildableReference>
+            <SkippedTests>
+               <Test
+                  Identifier = "eclipseappUITests">
+               </Test>
+               <Test
+                  Identifier = "eclipseappUITestsLaunchTests">
+               </Test>
+            </SkippedTests>
          </TestableReference>
       </Testables>
    </TestAction>
