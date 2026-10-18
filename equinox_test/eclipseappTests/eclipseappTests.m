@@ -11,7 +11,7 @@
 #include "eclipseUnicode.h"
 #include "MockDisplayMessage.h"
 
-extern JNIEXPORT int run(int argc, _TCHAR* argv[], _TCHAR* vmArgs[]);
+extern JNIEXPORT int runPtr(int argc, _TCHAR* argv[], _TCHAR* vmArgs[]);
 
 static _Thread_local int test_argc;
 
@@ -112,7 +112,7 @@ _TCHAR* findFile( _TCHAR* path, _TCHAR* prefix) {
   char** args;
   args = (char**) malloc(sizeof(char*));
   args[0] = program;
-  run(1, args, NULL);
+  runPtr(1, args, NULL);
   free(args);
 //  XCTAssertEqual(input, result);
 }

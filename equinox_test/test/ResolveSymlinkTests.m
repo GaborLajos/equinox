@@ -5,6 +5,7 @@
 #import <XCTest/XCTest.h>
 #import <OCMock/OCMock.h>
 #import <CoreFoundation/CoreFoundation.h>
+#include <dlfcn.h>
 #import "fishhook.h"
 #import "eclipseCommon.h"
 
@@ -42,7 +43,7 @@ static void *my_allocate(CFIndex size,
                          CFOptionFlags hint,
                          void *info)
 {
-    counterCFString++;
+//    counterCFString++;
 
     return CFAllocatorAllocate(
         getOrigAllocator(),
@@ -65,7 +66,7 @@ static void *my_reallocate(void *ptr,
 static void my_deallocate(void *ptr,
                           void *info)
 {
-    counterCFString--;
+//    counterCFString--;
 
     CFAllocatorDeallocate(
         getOrigAllocator(),
@@ -107,15 +108,17 @@ static CFAllocatorRef myAllocator(void)
 
 void my_CFRelease(CFTypeRef cf)
 {
-
-    if (cf == CFStringGetTypeID()) {
+  if (cf != NULL) {
+    CFTypeID type = CFGetTypeID(cf);
+    if (type == CFStringGetTypeID()) {
               // CFString
       counterCFString--;
-    } else if (cf == CFURLGetTypeID()) {
+    } else if (type == CFURLGetTypeID()) {
       counterCFURL--;
     } else {
     
     }
+  }
   XCTAssertNotNil(cf);
   if (cf != nil) {
     orig_CFRelease(cf);
@@ -173,10 +176,36 @@ Boolean my_CFURLGetFileSystemRepresentation(CFURLRef url,
 @end
 
 @implementation ResolveSymlinksTests
+typedef char* (*run_fn)(char *);
+
+static void *launcherHandle;
+static run_fn resolveSymlinksPtr;
 
 - (void)setUp
 {
-    [super setUp];
+  [super setUp];
+  NSString *testBundle =
+      [[NSBundle bundleForClass:[self class]] bundlePath];
+
+  int rc = chdir([testBundle fileSystemRepresentation]);
+
+  NSLog(@"bundle=%@", testBundle);
+  NSLog(@"chdir rc=%d", rc);
+  NSLog(@"cwd=%@", [[NSFileManager defaultManager] currentDirectoryPath]);
+  dlerror();
+  launcherHandle = dlopen(
+        "/../plugins/org.eclipse.equinox.launcher.cocoa.macosx.x86_64_11925.so/eclipse_11925.so",
+        RTLD_GLOBAL | RTLD_NOW );
+
+    assert(launcherHandle != NULL);
+
+      resolveSymlinksPtr = (run_fn)dlsym(launcherHandle, "resolveSymlinks");
+  if (  resolveSymlinksPtr == NULL) {
+    NSLog(@"error %s", dlerror());
+  }
+
+    assert(  resolveSymlinksPtr != nil);
+
 
     counterCFString = 0;
     counterCFURL = 0;
@@ -184,13 +213,12 @@ Boolean my_CFURLGetFileSystemRepresentation(CFURLRef url,
     getOrigAllocator();
 
     CFAllocatorSetDefault(myAllocator());
-  rebind_symbols((struct rebinding[5]) {
+  rebind_symbols((struct rebinding[4]) {
     {"CFURLGetFileSystemRepresentation", my_CFURLGetFileSystemRepresentation, &orig_CFURLGetFileSystemRepresentation},
     {"CFURLCreateWithFileSystemPath", my_CFURLCreateWithFileSystemPath, &orig_CFURLCreateWithFileSystemPath},
     {"CFStringCreateWithCString", my_CFStringCreateWithCString, &orig_CFStringCreateWithCString},
-    {"CFURLCreateWithFileSystemPath", my_CFURLCreateWithFileSystemPath, &orig_CFURLCreateWithFileSystemPath},
     {"CFRelease", my_CFRelease, &orig_CFRelease}
-  }, 5);
+  }, 4);
 }
 
 - (void)tearDown
@@ -204,6 +232,10 @@ Boolean my_CFURLGetFileSystemRepresentation(CFURLRef url,
   }, 5);
 
   CFAllocatorSetDefault(getOrigAllocator());
+  dlclose(launcherHandle);
+
+    resolveSymlinksPtr = NULL;
+  launcherHandle = NULL;
 
     [super tearDown];
 }
@@ -212,7 +244,7 @@ Boolean my_CFURLGetFileSystemRepresentation(CFURLRef url,
 {
     char *input = NULL;
 
-    char *result = resolveSymlinks(input);
+    char *result = resolveSymlinksPtr(input);
 
     XCTAssertEqual(input, result);
 }
@@ -221,7 +253,7 @@ Boolean my_CFURLGetFileSystemRepresentation(CFURLRef url,
 {
     char *input = "testNullString";
 
-    char *result = resolveSymlinks(input);
+    char *result = resolveSymlinksPtr(input);
 
     XCTAssertEqual(input, result);
     XCTAssertEqual(0, counterCFString);
@@ -232,7 +264,7 @@ Boolean my_CFURLGetFileSystemRepresentation(CFURLRef url,
 {
     char *input = "testNullURL";
 
-    char *result = resolveSymlinks(input);
+    char *result = resolveSymlinksPtr(input);
 
     XCTAssertEqual(input, result);
     XCTAssertEqual(0, counterCFString);
@@ -243,7 +275,7 @@ Boolean my_CFURLGetFileSystemRepresentation(CFURLRef url,
 {
     char *input = "testFalse";
 
-    char *result = resolveSymlinks(input);
+    char *result = resolveSymlinksPtr(input);
 
     XCTAssertTrue((__bridge id)result == NULL);
     XCTAssertEqual(0, counterCFString);
@@ -263,7 +295,7 @@ Boolean my_CFURLGetFileSystemRepresentation(CFURLRef url,
 
     char *input = "testError";
 
-    char *result = resolveSymlinks(input);
+    char *result = resolveSymlinksPtr(input);
 
     XCTAssertTrue(result == NULL);
 
@@ -275,7 +307,7 @@ Boolean my_CFURLGetFileSystemRepresentation(CFURLRef url,
     char *input = "/private/tmp/testfile02";
     char *expected = "/private/tmp/testfile01";
 
-    char *result = resolveSymlinks(input);
+    char *result = resolveSymlinksPtr(input);
 
     XCTAssertTrue(result != NULL);
     XCTAssertEqual(0, strcmp(expected, result));

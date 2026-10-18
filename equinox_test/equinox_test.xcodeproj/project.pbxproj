@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2215CE473081549B00D7DCF8 /* test.ini in Resources */ = {isa = PBXBuildFile; fileRef = 2215CE463081549B00D7DCF8 /* test.ini */; };
 		221B676030647650007CF8FA /* eclipseappTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 221B675F30647650007CF8FA /* eclipseappTests.m */; };
 		221B676A30647650007CF8FA /* eclipseappUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 221B676930647650007CF8FA /* eclipseappUITests.m */; };
 		221B676C30647650007CF8FA /* eclipseappUITestsLaunchTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 221B676B30647650007CF8FA /* eclipseappUITestsLaunchTests.m */; };
@@ -14,7 +15,6 @@
 		2296C62B3067ACDB009C55D6 /* eclipse_11925.so in Frameworks */ = {isa = PBXBuildFile; fileRef = 22CD8F023060167C0090D409 /* eclipse_11925.so */; };
 		2296C6343067C3FB009C55D6 /* eclipse_11925.so in Copy Files */ = {isa = PBXBuildFile; fileRef = 22CD8F023060167C0090D409 /* eclipse_11925.so */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 		22CD8F12306016D30090D409 /* ResolveSymlinkTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 22CD8F11306016D30090D409 /* ResolveSymlinkTests.m */; settings = {COMPILER_FLAGS = "-x objective-c"; }; };
-		22CD8F13306016D30090D409 /* eclipse_11925.so in Frameworks */ = {isa = PBXBuildFile; fileRef = 22CD8F023060167C0090D409 /* eclipse_11925.so */; settings = {ATTRIBUTES = (Required, ); }; };
 		22CD8F23306027C00090D409 /* eclipse.c in Sources */ = {isa = PBXBuildFile; fileRef = 22CD8F1C306027C00090D409 /* eclipse.c */; settings = {COMPILER_FLAGS = "-xobjective-c"; }; };
 		22CD8F24306027C00090D409 /* eclipseCommon.c in Sources */ = {isa = PBXBuildFile; fileRef = 22CD8F1D306027C00090D409 /* eclipseCommon.c */; settings = {COMPILER_FLAGS = "-xobjective-c"; }; };
 		22CD8F25306027C00090D409 /* eclipseConfig.c in Sources */ = {isa = PBXBuildFile; fileRef = 22CD8F1E306027C00090D409 /* eclipseConfig.c */; settings = {COMPILER_FLAGS = "-xobjective-c"; }; };
@@ -22,7 +22,6 @@
 		22CD8F34306028540090D409 /* eclipseShm.c in Sources */ = {isa = PBXBuildFile; fileRef = 22CD8F2E306028540090D409 /* eclipseShm.c */; settings = {COMPILER_FLAGS = "-xobjective-c"; }; };
 		22CD8F35306028540090D409 /* eclipseUtil.c in Sources */ = {isa = PBXBuildFile; fileRef = 22CD8F2F306028540090D409 /* eclipseUtil.c */; settings = {COMPILER_FLAGS = "-xobjective-c"; }; };
 		22CD8F383060287D0090D409 /* eclipseCocoaCommon.c in Sources */ = {isa = PBXBuildFile; fileRef = 22CD8F373060287D0090D409 /* eclipseCocoaCommon.c */; settings = {COMPILER_FLAGS = "-xobjective-c"; }; };
-		22CD8F3B306041750090D409 /* libjvm.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 22CD8F3A306041750090D409 /* libjvm.dylib */; };
 		22CD8F463060505C0090D409 /* eclipseCocoa.c in Sources */ = {isa = PBXBuildFile; fileRef = 22CD8F453060505C0090D409 /* eclipseCocoa.c */; settings = {COMPILER_FLAGS = "-xobjective-c"; }; };
 		22D237B63069601B0098AB29 /* OCMock in Frameworks */ = {isa = PBXBuildFile; productRef = 22D237B53069601B0098AB29 /* OCMock */; };
 		22D237C5306961200098AB29 /* eclipse_11925.so in Frameworks */ = {isa = PBXBuildFile; fileRef = 22CD8F023060167C0090D409 /* eclipse_11925.so */; };
@@ -235,6 +234,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		2215CE463081549B00D7DCF8 /* test.ini */ = {isa = PBXFileReference; lastKnownFileType = text; path = test.ini; sourceTree = "<group>"; };
 		221B67363060ECC0007CF8FA /* ocmock */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = ocmock; path = ../../ocmock; sourceTree = "<group>"; };
 		221B673E3062FA5A007CF8FA /* ParseArgsTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ParseArgsTests.m; sourceTree = "<group>"; };
 		221B67443064764C007CF8FA /* eclipse.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = eclipse.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -681,7 +681,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				22CD8F3B306041750090D409 /* libjvm.dylib in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -690,7 +689,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				22D237B63069601B0098AB29 /* OCMock in Frameworks */,
-				22CD8F13306016D30090D409 /* eclipse_11925.so in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1200,6 +1198,7 @@
 		22CD8EE0306014E90090D409 = {
 			isa = PBXGroup;
 			children = (
+				2215CE463081549B00D7DCF8 /* test.ini */,
 				22FA65AB307147E100832044 /* library */,
 				22FA659130713A0700832044 /* Info.plist */,
 				221B67353060ECC0007CF8FA /* Packages */,
@@ -1361,6 +1360,7 @@
 				2296C6333067C3E5009C55D6 /* Copy Files */,
 				221B67403064764B007CF8FA /* Sources */,
 				221B67413064764B007CF8FA /* Frameworks */,
+				22FCDACA30793ED800C674E6 /* ShellScript */,
 				221B67423064764B007CF8FA /* Resources */,
 			);
 			buildRules = (
@@ -1639,6 +1639,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2215CE473081549B00D7DCF8 /* test.ini in Resources */,
 				22FA659230713A0700832044 /* Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1672,6 +1673,26 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		22FCDACA30793ED800C674E6 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\nPLIST=\"$TARGET_BUILD_DIR/$INFOPLIST_PATH\"\n\nif plutil -extract Eclipse raw \"$PLIST\" >/dev/null 2>&1; then\n    plutil -replace Eclipse \\\n           -json '[\"-consoleLog\",\"/tmp/eclipse.log\",\n                   \"-vm\",\"/Library/Java/JavaVirtualMachines/jdk-11.jdk/Contents/Home/bin/java\", \n                   \"--launcher.ini\",\"./test.ini\"]' \\\n           \"$PLIST\"\nelse\n    plutil -insert Eclipse \\\n           -json '[\"-consoleLog\",\"/tmp/eclipse.log\",\n                   \"-vm\",\"/Library/Java/JavaVirtualMachines/jdk-11.jdk/Contents/Home/bin/java\",\n                   \"--launcher.ini\",\"./test.ini\"]' \\\n           \"$PLIST\"\nfi\n";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		221B67403064764B007CF8FA /* Sources */ = {
@@ -2142,6 +2163,7 @@
 					"$(JAVA_HOME)/include",
 					"$(JAVA_HOME)/include/darwin",
 				);
+				INFOPLIST_KEY_UIRequiredDeviceCapabilities = "";
 				LD_RUNPATH_SEARCH_PATHS = "$(JAVA_HOME)/lib/server\n";
 				LIBRARY_SEARCH_PATHS = "$(JAVA_HOME)/lib/server";
 				LIB_VERSION = 11925;
@@ -2177,6 +2199,7 @@
 					"$(JAVA_HOME)/include",
 					"$(JAVA_HOME)/include/darwin",
 				);
+				INFOPLIST_KEY_UIRequiredDeviceCapabilities = "";
 				LD_RUNPATH_SEARCH_PATHS = "$(JAVA_HOME)/lib/server\n";
 				LIBRARY_SEARCH_PATHS = "$(JAVA_HOME)/lib/server";
 				LIB_VERSION = 11925;
