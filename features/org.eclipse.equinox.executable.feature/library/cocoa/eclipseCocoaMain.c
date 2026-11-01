@@ -58,6 +58,9 @@ int main( int argc, char* argv[] ) {
     }
 
 	fgConsoleLog= fopen("/dev/console", "w");
+  if (fgConsoleLog == NULL) {
+    perror("Unable to open log");
+  }
 	fgPid= getpid();
 
 	dumpArgs("start", argc, argv);
@@ -119,11 +122,13 @@ int main( int argc, char* argv[] ) {
 
 static void debug(const char *fmt, ...) {
 #if DEBUG
-	va_list ap;
-	va_start(ap, fmt);
-	fprintf(fgConsoleLog, "%05d: ", fgPid);
-	vfprintf(fgConsoleLog, fmt, ap);
-	va_end(ap);
+  if (fgConsoleLog) {
+  	va_list ap;
+  	va_start(ap, fmt);
+  	fprintf(fgConsoleLog, "%05d: ", fgPid);
+  	vfprintf(fgConsoleLog, fmt, ap);
+  	va_end(ap);
+  }
 #endif
 }
 
@@ -136,9 +141,11 @@ static void dumpArgs(char *tag, int argc, char* argv[]) {
 			 argc++;
 	}
 	debug(">>>> %s:", tag);
-	for (i= 0; i < argc && argv[i] != NULL; i++)
-		fprintf(fgConsoleLog, " <%s>", argv[i]);
-	fprintf(fgConsoleLog, "\n");
+  if (fgConsoleLog) {
+    for (i= 0; i < argc && argv[i] != NULL; i++)
+      fprintf(fgConsoleLog, " <%s>", argv[i]);
+    fprintf(fgConsoleLog, "\n");
+  }
 #endif
 }
 
